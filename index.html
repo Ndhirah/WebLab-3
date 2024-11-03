@@ -23,6 +23,109 @@
             showSection('dashboard');
         };
     </script>
+    <style>
+        /* General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Navigation Menu - Flexbox */
+        header {
+            background-color: #c9a3d8;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Dashboard Section - Grid */
+        #dashboard {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            margin: 20px;
+            border-radius: 8px;
+        }
+
+        #dashboard h2 {
+            grid-column: 1 / -1;
+            text-align: center;
+        }
+
+        .dashboard-grid-item {
+            background-color: #C8A2C8;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Hobbies Section - Flexbox Gallery */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .gallery img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Biodata Table Styling */
+        #biodata table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        #biodata th, #biodata td {
+            border: 1px solid #C8A2C8;
+            padding: 10px;
+            text-align: left;
+            background-color: #f9f9f9;
+        }
+
+        /* Footer - Flexbox */
+        footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #c9a3d8;
+            color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+    </style>
 </head>
 <body>
 
@@ -39,110 +142,121 @@
         </nav>
     </header>
 
-    <!-- Dashboard Section -->
+    <!-- Dashboard Section - Grid Layout -->
     <section id="dashboard">
         <h2>About Me</h2>
-        <p>Hello! I’m Nur Nadhirah Binti Masri, a 21-year-old Software Engineering student from Melaka. I am currently studying at Universiti Tun Hussein Onn (UTHM). My passion lies in technology, and I'm proficient in various programming languages. Through this site, you can learn more about my journey, interests, and experiences. Welcome, and enjoy exploring my site!</p>
+        <div class="dashboard-grid-item">
+            <p>Hello! I’m Nur Nadhirah Binti Masri, a 21-year-old Software Engineering student from Melaka. I am currently studying at Universiti Tun Hussein Onn (UTHM). My passion lies in technology, and I'm proficient in various programming languages. Through this site, you can learn more about my journey, interests, and experiences. Welcome, and enjoy exploring my site!</p>
+        </div>
+        <div class="dashboard-grid-item">
+            <p><strong>Programming Skills:</strong> Java, C++, C, C#, HTML, PHP, CSS, JavaScript, Python, Dart</p>
+        </div>
+        <div class="dashboard-grid-item">
+            <p><strong>Future Goals:</strong> Mastering in web development by 2025</p>
+        </div>
     </section>
 
-    <!-- Biodata Section -->
-    <section id="biodata">
-        <table border = "1">
-            <tr bgcolor = #C8A2C8 >
-                <td> <strong> Name </strong> </td>
-                <td colspan="2"> Nur Nadhirah binti Masri  </td>
-                <td>  
-                    <img src = "img/me.jpg"
-                    width = 200px >
-                </td>
+<!-- Biodata Section -->
+<section id="biodata">
+    <table border = "1">
+        <tr bgcolor = #C8A2C8 >
+            <td> <strong> Name </strong> </td>
+            <td colspan="2"> Nur Nadhirah binti Masri  </td>
+            <td>  
+                <img src = "img/me.jpg"
+                width = 200px >
+            </td>
+    
+        </tr>
+        <tr bgcolor = #C8A2C8>
+            <td> <strong> Date of birth </strong> </td>
+            <td colspan="3"> 3 August 2003</td>
+        </tr>
+        <tr bgcolor = #C8A2C8 >
+            <td> <strong> Religion </strong>  </td>
+            <td colspan="3"> Islam </td>
+        </tr>
+        <tr bgcolor = #C8A2C8>
+            <td > <strong> Race </strong></td>
+            <td colspan="3"> Malay </td>
+        </tr>
+        <tr bgcolor = #C8A2C8>
+            <td rowspan="6"> <strong> Address </strong>  </td>
         
-            </tr>
-            <tr bgcolor = #C8A2C8>
-                <td> <strong> Date of birth </strong> </td>
-                <td colspan="3"> 3 August 2003</td>
-            </tr>
-            <tr bgcolor = #C8A2C8 >
-                <td> <strong> Religion </strong>  </td>
-                <td colspan="3"> Islam </td>
-            </tr>
-            <tr bgcolor = #C8A2C8>
-                <td > <strong> Race </strong></td>
-                <td colspan="3"> Malay </td>
-            </tr>
-            <tr bgcolor = #C8A2C8>
-                <td rowspan="6"> <strong> Address </strong>  </td>
-            
-            </tr>
-            <tr bgcolor = #C8A2C8>
-                <td> <strong> Street </strong> </td>
-                <td colspan="2"> Bertam Malim </td>
-            </tr>
-            <tr bgcolor = #C8A2C8>
-                <td> <strong> Town </strong> </td>
-                <td colspan="2"> Malacca </td>
-            </tr>
-            <tr bgcolor = #C8A2C8>
-                <td><strong> District </strong> </td>
-                <td colspan="2"> Melaka Tengah </td>
-            </tr>
-            <tr bgcolor = #C8A2C8>
-                <td><strong> State</strong> </td>
-                <td colspan="2"> Malacca </td>
-            </tr>
-            </tr>
-            <tr bgcolor = #C8A2C8>
-                <td rowspan="4"> <strong> Contact </strong>  </td>
-            </tr>
-            <tr bgcolor = #C8A2C8>
-                <td> <strong> Mobile Phone </strong> </td>
-                <td colspan="2"> 01139998803 </td>
-            </tr>
-            <tr bgcolor = #C8A2C8>
-                <td> <strong> Social Media </strong> </td>
-                <td colspan="2" > ndhirahmsri </td>
-            </tr>
-            <tr bgcolor = #C8A2C8>
-                <td><strong> Website </strong>  </td>
-                <td colspan="2"> Ndhiirah </td>
-            </tr>
-        
-            <tr bgcolor = #C8A2C8>
-                <td><strong> Course and Institution </strong>  </td>
-                <td colspan="3"> Software Engineering & UTHM </td>
-            </tr>
-            <tr bgcolor = #C8A2C8>
-                <td> <strong> Programming skills </strong>  </td>
-                <td colspan="3"> Java, C++, C, C#, HTML, PHP, CSS, JavaScript, Python, Dart </td>
-            </tr>
-            <tr bgcolor = #C8A2C8>
-                <td><strong> Personal Inerest </strong> </td>
-                <td colspan="3"> Shopping with Hani </td>
-            </tr>
-            <tr bgcolor = #C8A2C8>
-                <td><strong> Future plan in 2025 </strong> </td>
-                <td colspan="3"> Mastering in webdev </td>
-            </tr>
-        </table>
-    </section>
+        </tr>
+        <tr bgcolor = #C8A2C8>
+            <td> <strong> Street </strong> </td>
+            <td colspan="2"> Bertam Malim </td>
+        </tr>
+        <tr bgcolor = #C8A2C8>
+            <td> <strong> Town </strong> </td>
+            <td colspan="2"> Malacca </td>
+        </tr>
+        <tr bgcolor = #C8A2C8>
+            <td><strong> District </strong> </td>
+            <td colspan="2"> Melaka Tengah </td>
+        </tr>
+        <tr bgcolor = #C8A2C8>
+            <td><strong> State</strong> </td>
+            <td colspan="2"> Malacca </td>
+        </tr>
+        </tr>
+        <tr bgcolor = #C8A2C8>
+            <td rowspan="4"> <strong> Contact </strong>  </td>
+        </tr>
+        <tr bgcolor = #C8A2C8>
+            <td> <strong> Mobile Phone </strong> </td>
+            <td colspan="2"> 01139998803 </td>
+        </tr>
+        <tr bgcolor = #C8A2C8>
+            <td> <strong> Social Media </strong> </td>
+            <td colspan="2" > ndhirahmsri </td>
+        </tr>
+        <tr bgcolor = #C8A2C8>
+            <td><strong> Website </strong>  </td>
+            <td colspan="2"> Ndhiirah </td>
+        </tr>
+    
+        <tr bgcolor = #C8A2C8>
+            <td><strong> Course and Institution </strong>  </td>
+            <td colspan="3"> Software Engineering & UTHM </td>
+        </tr>
+        <tr bgcolor = #C8A2C8>
+            <td> <strong> Programming skills </strong>  </td>
+            <td colspan="3"> Java, C++, C, C#, HTML, PHP, CSS, JavaScript, Python, Dart </td>
+        </tr>
+        <tr bgcolor = #C8A2C8>
+            <td><strong> Personal Inerest </strong> </td>
+            <td colspan="3"> Shopping with Hani </td>
+        </tr>
+        <tr bgcolor = #C8A2C8>
+            <td><strong> Future plan in 2025 </strong> </td>
+            <td colspan="3"> Mastering in webdev </td>
+        </tr>
+    </table>
+</section>
+
+
+
+
 
     <!-- Hobbies Section -->
     <section id="hobbies">
         <h2>Hobbies</h2>
         <ul>
-
             <li>Workout</li>
             <div class="gallery">
-                <img src="img/workout.jpg" alt="NeonRun">
+                <img src="img/workout.jpg" width = 50px >
             </div>
 
             <li>Traveling</li>
             <div class="gallery">
-                <img src="img/photo9.jpg" alt="NeonRun">
+                <img src="img/photo9.jpg" width = 50px >
             </div>
 
             <li>Upgrade skills in programming</li>
             <div class="gallery">
-                <img src="img/hobbies1.jpg" alt="NeonRun">
+                <img src="img/hobbies1.jpg" width = 50px >
             </div>
         </ul>
     </section>
@@ -152,25 +266,24 @@
         <h2>Campus Life</h2>
         <p>Here are some memorable moments from my campus life:</p>
         <div class="gallery">
-            <img src="img/photo1.jpg" alt="Program">
-            <img src="img/photo2.jpg" alt="Conference">
-            <img src="img/photo3.jpg" alt="Vacation">
-            <img src="img/photo4.jpg" alt="Festival">
-            <img src="img/photo5.jpg" alt="Festival">
-            <img src="img/photo6.jpg" alt="Festival">
-            <img src="img/photo7.jpg" alt="Festival">
-            <img src="img/photo8.jpg" alt="Festival">
-            <img src="img/photo10.jpg" alt="Festival">
-            <img src="img/photo11.jpg" alt="Festival">
-            <img src="img/patrickstar.jpg" alt="Festival">
-
+            <img src="img/photo1.jpg" width = 200px >
+            <img src="img/photo2.jpg" width = 200px >
+            <img src="img/photo3.jpg" width = 200px >
+            <img src="img/photo4.jpg" width = 200px >
+            <img src="img/photo5.jpg" width = 200px >
+            <img src="img/photo6.jpg" width = 200px >
+            <img src="img/photo7.jpg" width = 200px >
+            <img src="img/photo8.jpg" width = 200px >
+            <img src="img/photo9.jpg" width = 200px >
+            <img src="img/photo10.jpg" width = 200px >
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; Nadhirah's.</p>
+        <p>&copy; 2024 Nadhirah's.</p>
     </footer>
 
 </body>
 </html>
+
